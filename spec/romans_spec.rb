@@ -137,6 +137,25 @@ context "numbers greater than 5*base and less than 9*base (6,7,8,60,70,80...)" d
 
     context "composite numbers (16,27,66,87...)" do
 
+      it 'converts 16 to XIII' do 
+        expect(rom.convert(16)).to eq('XVI')
+      end
+
+      it 'converts 27 to XXI' do 
+        expect(rom.convert(27)).to eq('XXVII')
+      end
+
+      it 'converts 66 to XXXIII' do 
+        expect(rom.convert(66)).to eq('LXVI')
+      end
+
+      it 'converts 87 to CCCXXX' do 
+        expect(rom.convert(87)).to eq('LXXXVII')
+      end
+      
+      it 'converts 667 to CCCXXX' do 
+        expect(rom.convert(667)).to eq('DCLXVII')
+      end
 
     end
 
