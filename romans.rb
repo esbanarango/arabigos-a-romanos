@@ -22,24 +22,26 @@ class Romans
     process num
   end
 
+  private
+
   def process num
     num = num.to_s
     base = 10**(num.length-1)
-    romano = ''
+    roman_number = ''
     num.chars.each_with_index do |c,i|
       dig = get_first_digit(c.to_i*base)
       case 
-      when dig < 4*base
-        romano += SYMBOLS[base]*dig
+      when dig < 4
+        roman_number += SYMBOLS[base]*dig
+      when dig == 4
+        roman_number += SYMBOLS[base] + SYMBOLS[base*5]             
       else
-        romano = 'dont know yet'
+        roman_number = 'dont know yet'
       end
       base = base/10
     end
-    romano
+    roman_number
   end
-
-  private
 
   def get_first_digit num
     num.to_s[0].to_i

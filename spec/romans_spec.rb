@@ -80,6 +80,21 @@ describe Romans do
 
   end
 
+  context "numbers equals to 4*base (4,40,400..)" do
+
+    it 'converts 4 to IV' do 
+      expect(rom.convert(4)).to eq('IV')
+    end
+
+    it 'converts 40 to XL' do 
+      expect(rom.convert(40)).to eq('XL')
+    end
+
+    it 'converts 400 to XL' do 
+      expect(rom.convert(400)).to eq('CD')
+    end
+
+  end
 
 
 end
