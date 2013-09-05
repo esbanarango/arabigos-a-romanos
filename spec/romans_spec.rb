@@ -58,6 +58,26 @@ describe Romans do
       expect(rom.convert(300)).to eq('CCC')
     end 
 
+    context "composite numbers" do
+
+      it 'converts 13 to XIII' do 
+        expect(rom.convert(13)).to eq('XIII')
+      end
+
+      it 'converts 21 to XXI' do 
+        expect(rom.convert(21)).to eq('XXI')
+      end
+
+      it 'converts 33 to XXXIII' do 
+        expect(rom.convert(33)).to eq('XXXIII')
+      end
+
+      it 'converts 330 to CCCXXX' do 
+        expect(rom.convert(330)).to eq('CCCXXX')
+      end
+
+    end
+
   end
 
 
