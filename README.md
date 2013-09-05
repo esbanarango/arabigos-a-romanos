@@ -1,7 +1,7 @@
 Arabigos a Romanos
 ==================
 
-Dojo using TDD conducted in Requirements Engineering class (09/05/2013).
+Dojo using TDD conducted at Requirements Engineering class (09/05/2013).
 
 ### Problem
 

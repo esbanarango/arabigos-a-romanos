@@ -18,6 +18,31 @@ class Romans
   end
 
   def convert num
-    SYMBOLS[num]
+    return SYMBOLS[num] if SYMBOLS.has_key?(num)
+    process num
   end
+
+  def process num
+    num = num.to_s
+    base = 10**(num.length-1)
+    romano = ''
+    num.chars.each_with_index do |c,i|
+      dig = get_first_digit(c.to_i*base)
+      case 
+      when dig < 4*base
+        romano += SYMBOLS[base]*dig
+      else
+        romano = 'dont know yet'
+      end
+      base = base/10
+    end
+    romano
+  end
+
+  private
+
+  def get_first_digit num
+    num.to_s[0].to_i
+  end
+
 end
