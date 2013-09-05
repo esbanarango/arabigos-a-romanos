@@ -10,14 +10,14 @@
 # * La cifra X, precediendo a la L o a la C, les resta diez unidades.
 # * La cifra C, delante de la D o la M, les resta cien unidades.
 
-class Romanos
+class Romans
 
   SYMBOLS = {1 => 'I',5 => 'V', 10 => 'X', 50 => 'L',100=>'C', 500 => 'D', 1000=>'M' }
 
   def initialize
   end
 
-  def convertir num
+  def convert num
     SYMBOLS[num]
   end
 end

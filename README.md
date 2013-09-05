@@ -1,4 +1,12 @@
 Arabigos a Romanos
 ==================
 
-Dojo TDD, Ingeniería de Requisitos.
+Dojo using TDD conducted in Requirements Engineering class (09/05/2013).
+
+### Problem
+
+Given an Arabic number give its representation on Roman number.
+
+#### Constraint
+
+> Numbers between 1 and 3999
