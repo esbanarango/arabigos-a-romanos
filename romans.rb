@@ -34,7 +34,9 @@ class Romans
       when dig < 4
         roman_number += SYMBOLS[base]*dig
       when dig == 4
-        roman_number += SYMBOLS[base] + SYMBOLS[base*5]             
+        roman_number += SYMBOLS[base] + SYMBOLS[base*5]
+      when dig.between?(6,8)
+        roman_number += SYMBOLS[base*5] + SYMBOLS[base]*(dig-5)
       else
         roman_number = 'dont know yet'
       end

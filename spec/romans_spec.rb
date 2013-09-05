@@ -97,4 +97,50 @@ describe Romans do
   end
 
 
+context "numbers greater than 5*base and less than 9*base (6,7,8,60,70,80...)" do
+
+    it 'converts 6 to II' do 
+      expect(rom.convert(6)).to eq('VI')
+    end
+
+    it 'converts 7 to III' do 
+      expect(rom.convert(7)).to eq('VII')
+    end
+
+    it 'converts 8 to XX' do 
+      expect(rom.convert(8)).to eq('VIII')
+    end
+
+    it 'converts 60 to XXX' do 
+      expect(rom.convert(60)).to eq('LX')
+    end 
+
+    it 'converts 70 to CCC' do 
+      expect(rom.convert(70)).to eq('LXX')
+    end 
+
+    it 'converts 80 to CCC' do 
+      expect(rom.convert(80)).to eq('LXXX')
+    end 
+
+    it 'converts 600 to XXX' do 
+      expect(rom.convert(600)).to eq('DC')
+    end 
+
+    it 'converts 700 to CCC' do 
+      expect(rom.convert(700)).to eq('DCC')
+    end 
+
+    it 'converts 800 to CCC' do 
+      expect(rom.convert(800)).to eq('DCCC')
+    end 
+
+    context "composite numbers (16,27,66,87...)" do
+
+
+    end
+
+  end
+
+
 end
