@@ -90,71 +90,111 @@ describe Romans do
       expect(rom.convert(40)).to eq('XL')
     end
 
-    it 'converts 400 to XL' do 
+    it 'converts 400 to CD' do 
       expect(rom.convert(400)).to eq('CD')
     end
 
   end
 
 
-context "numbers greater than 5*base and less than 9*base (6,7,8,60,70,80...)" do
+  context "numbers greater than 5*base and less than 9*base (6,7,8,60,70,80...)" do
 
-    it 'converts 6 to II' do 
+    it 'converts 6 to CD' do 
       expect(rom.convert(6)).to eq('VI')
     end
 
-    it 'converts 7 to III' do 
+    it 'converts 7 to VII' do 
       expect(rom.convert(7)).to eq('VII')
     end
 
-    it 'converts 8 to XX' do 
+    it 'converts 8 to VIII' do 
       expect(rom.convert(8)).to eq('VIII')
     end
 
-    it 'converts 60 to XXX' do 
+    it 'converts 60 to LX' do 
       expect(rom.convert(60)).to eq('LX')
     end 
 
-    it 'converts 70 to CCC' do 
+    it 'converts 70 to LXX' do 
       expect(rom.convert(70)).to eq('LXX')
     end 
 
-    it 'converts 80 to CCC' do 
+    it 'converts 80 to LXXX' do 
       expect(rom.convert(80)).to eq('LXXX')
     end 
 
-    it 'converts 600 to XXX' do 
+    it 'converts 600 to DC' do 
       expect(rom.convert(600)).to eq('DC')
     end 
 
-    it 'converts 700 to CCC' do 
+    it 'converts 700 to DCC' do 
       expect(rom.convert(700)).to eq('DCC')
     end 
 
-    it 'converts 800 to CCC' do 
+    it 'converts 800 to DCCC' do 
       expect(rom.convert(800)).to eq('DCCC')
     end 
 
     context "composite numbers (16,27,66,87...)" do
 
-      it 'converts 16 to XIII' do 
+      it 'converts 16 to XVI' do 
         expect(rom.convert(16)).to eq('XVI')
       end
 
-      it 'converts 27 to XXI' do 
+      it 'converts 27 to XXVII' do 
         expect(rom.convert(27)).to eq('XXVII')
       end
 
-      it 'converts 66 to XXXIII' do 
+      it 'converts 66 to LXVI' do 
         expect(rom.convert(66)).to eq('LXVI')
       end
 
-      it 'converts 87 to CCCXXX' do 
+      it 'converts 87 to LXXXVII' do 
         expect(rom.convert(87)).to eq('LXXXVII')
       end
       
-      it 'converts 667 to CCCXXX' do 
+      it 'converts 667 to DCLXVII' do 
         expect(rom.convert(667)).to eq('DCLXVII')
+      end
+
+    end
+
+  end
+
+  context "numbers equals to 9*base (9,90,900)" do
+
+    it 'converts 9 to IX' do 
+      expect(rom.convert(9)).to eq('IX')
+    end
+
+    it 'converts 90 to XC' do 
+      expect(rom.convert(90)).to eq('XC')
+    end
+
+    it 'converts 900 to CM' do 
+      expect(rom.convert(900)).to eq('CM')
+    end
+
+    context "composite numbers (19,99,696,999...)" do
+
+      it 'converts 19 to XIX' do 
+        expect(rom.convert(19)).to eq('XIX')
+      end
+
+      it 'converts 99 to XCIX' do 
+        expect(rom.convert(99)).to eq('XCIX')
+      end
+
+      it 'converts 696 to DCXCVI' do 
+        expect(rom.convert(696)).to eq('DCXCVI')
+      end
+
+      it 'converts 999 to CMXCIX' do 
+        expect(rom.convert(999)).to eq('CMXCIX')
+      end
+      
+      it 'converts 3999 to MMMCMXCIX' do 
+        expect(rom.convert(3999)).to eq('MMMCMXCIX')
       end
 
     end
